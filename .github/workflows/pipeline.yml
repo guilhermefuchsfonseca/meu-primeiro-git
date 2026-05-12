@@ -1,0 +1,20 @@
+name: Meu Primeiro Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verificar-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Dar permissao no script
+        run: chmod +x verificar-site.sh
+
+      - name: Executar script
+        run: ./verificar-site.sh
