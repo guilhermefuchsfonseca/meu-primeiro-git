@@ -17,4 +17,4 @@ jobs:
         run: chmod +x verificar-site.sh
 
       - name: Executar script
-        run: ./verificar-site.sh
+        run: ./arquivoquenaoexiste.sh
